@@ -1,0 +1,107 @@
+<!-- =========================================== メニュー画面レイアウト定義 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                tools:context="${relativePackage}.${activityClass}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+  <!-- ツールバー -->
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/tool_bar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:minHeight="?android:attr/actionBarSize"
+      android:background="?attr/colorPrimary"
+      android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+      android:navigationIcon="@drawable/ic_launcher" />
+
+  <!-- メニューボタン・スクロールエリア -->
+  <com.apps.android.sandbox.ui.BounceScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@id/tool_bar"
+      android:scrollbarSize="@dimen/scrollbar_size_default"
+      android:scrollbarThumbVertical="@drawable/scrollbar_thumb">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="40dp"
+                  android:layout_marginRight="40dp"
+                  android:orientation="vertical">
+
+      <Button android:id="@+id/btn_1"
+              android:layout_width="match_parent"
+              android:layout_height="55dp"
+              android:layout_marginTop="40dp"
+              android:layout_marginBottom="10dp"
+              android:text="@null"
+              android:textColor="@android:color/white"
+              android:background="@drawable/btn_main" />
+
+      <Button android:id="@+id/btn_2"
+              android:layout_width="match_parent"
+              android:layout_height="55dp"
+              android:layout_marginTop="10dp"
+              android:layout_marginBottom="10dp"
+              android:text="@null"
+              android:textColor="@android:color/white"
+              android:background="@drawable/btn_main" />
+
+      <Button android:id="@+id/btn_3"
+              android:layout_width="match_parent"
+              android:layout_height="55dp"
+              android:layout_marginTop="10dp"
+              android:layout_marginBottom="10dp"
+              android:text="@null"
+              android:textColor="@android:color/white"
+              android:background="@drawable/btn_main" />
+
+      <Button android:id="@+id/btn_4"
+              android:layout_width="match_parent"
+              android:layout_height="55dp"
+              android:layout_marginTop="10dp"
+              android:layout_marginBottom="10dp"
+              android:text="@null"
+              android:textColor="@android:color/white"
+              android:background="@drawable/btn_main" />
+
+      <Button android:id="@+id/btn_5"
+              android:layout_width="match_parent"
+              android:layout_height="55dp"
+              android:layout_marginTop="10dp"
+              android:layout_marginBottom="10dp"
+              android:text="@null"
+              android:textColor="@android:color/white"
+              android:background="@drawable/btn_main" />
+
+      <Button android:id="@+id/btn_6"
+              android:layout_width="match_parent"
+              android:layout_height="55dp"
+              android:layout_marginTop="10dp"
+              android:layout_marginBottom="10dp"
+              android:text="@null"
+              android:textColor="@android:color/white"
+              android:background="@drawable/btn_main" />
+
+      <Button android:id="@+id/btn_7"
+              android:layout_width="match_parent"
+              android:layout_height="55dp"
+              android:layout_marginTop="10dp"
+              android:layout_marginBottom="40dp"
+              android:text="@null"
+              android:textColor="@android:color/white"
+              android:background="@drawable/btn_main" />
+
+    </LinearLayout>
+
+  </com.apps.android.sandbox.ui.BounceScrollView>
+
+  <!-- ドロップシャドウ -->
+  <ImageView android:layout_width="match_parent"
+             android:layout_height="4dp"
+             android:layout_below="@id/tool_bar"
+             android:scaleType="fitXY"
+             android:src="@drawable/drop_shadow_toolbar"
+             android:contentDescription="@null" />
+
+</RelativeLayout>

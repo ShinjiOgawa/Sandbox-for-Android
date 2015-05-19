@@ -1,0 +1,61 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.apps.android.sandbox">
+
+  <!-- ==================================================== Use Permissions -->
+  <!-- ================================================== ネットワーク接続権限
+  <uses-permission android:name="android.permission.INTERNET" /> -->
+
+  <!-- ============================================== for Crosswalk WebView -->
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+  <uses-permission android:name="android.permission.RECORD_AUDIO" />
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+  <!-- ======================================================== Application -->
+  <application android:name=".SandboxApplication"
+               android:allowBackup="true"
+               android:icon="@mipmap/ic_launcher"
+               android:label="@string/app_name"
+               android:theme="@style/AppTheme">
+
+    <!-- ======================================================= meta-datas -->
+    <!-- =================================================== Fabric API Key -->
+    <meta-data android:name="io.fabric.ApiKey"
+               android:value="d9cbbb5daa854d14dc8e471db8d0406b1de954d3" />
+
+    <!-- ======================================================= Activities -->
+    <!-- ===================================================== MenuActivity -->
+    <activity android:name=".activity.MenuActivity"
+              android:label="@string/app_name">
+
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+
+    </activity>
+
+    <!-- ==================================================== MovieActivity -->
+    <activity android:name=".activity.MovieActivity"
+              android:label="@string/app_name"
+              android:screenOrientation="landscape"
+              android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+              android:windowSoftInputMode="stateAlwaysHidden"
+              android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+    <!-- ====================================================== TopActivity -->
+    <activity android:name=".activity.TopActivity"
+              android:label="@string/app_name"
+              android:screenOrientation="landscape"
+              android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+              android:windowSoftInputMode="stateAlwaysHidden"
+              android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+  </application>
+
+</manifest>

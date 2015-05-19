@@ -1,0 +1,20 @@
+<!-- =========================================================== 文字列定義 -->
+<resources>
+
+  <string name="app_name">Sandbox</string>
+
+  <!-- ============================================================ Buttons -->
+  <string name="btn_yes_ja">はい</string>
+  <string name="btn_exec_crash_application">Execute Crash Application</string>
+  <string name="btn_no_ja">いいえ</string>
+  <string name="btn_show_crosswalk_web_view">Show Crosswalk WebView</string>
+  <string name="btn_show_movie">Show Movie</string>
+  <string name="btn_show_video_ended_view">Show Video Ended View</string>
+
+  <!-- =========================================================== Messages -->
+  <string name="msg_exec_crash_application">アプリをクラッシュさせます¥nよろしいですか?</string>
+
+  <string name="hello_world">Hello world!</string>
+  <string name="action_settings">Settings</string>
+
+</resources>

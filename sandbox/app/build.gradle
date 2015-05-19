@@ -1,0 +1,114 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven { url 'https://maven.fabric.io/public' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:+'
+        classpath 'io.fabric.tools:gradle:+'
+    }
+}
+
+allprojects {
+    repositories { jcenter() }
+    tasks.withType(JavaCompile) { options.encoding = 'UTF-8' }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+    maven { url 'https://download.01.org/crosswalk/releases/crosswalk/android/maven2' }
+}
+
+def VERSION_CODE = 1
+def VERSION_NAME = '1.0.0'
+def PACKAGE_NAME = 'com.apps.android.sandbox'
+def DEBUG_KEY_STORE = '/debug.keystore'
+def DEBUG_KEY_ALIAS = 'androiddebugkey'
+def DEBUG_KEY_STORE_PWD = 'android'
+def DEBUG_KEY_ALIAS_PWD = 'android'
+def PRODUCT_KEY_STORE = '/debug.keystore'
+def PRODUCT_KEY_ALIAS = 'androidreleasekey'
+def PRODUCT_KEY_STORE_PWD = 'android'
+def PRODUCT_KEY_ALIAS_PWD = 'android'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion '22.0.1'
+    // useOldManifestMerger false
+
+    defaultConfig {
+        applicationId PACKAGE_NAME
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode VERSION_CODE
+        versionName VERSION_NAME
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file(DEBUG_KEY_STORE)
+            keyAlias DEBUG_KEY_ALIAS
+            storePassword DEBUG_KEY_STORE_PWD
+            keyPassword DEBUG_KEY_ALIAS_PWD
+        }
+        release {
+            // @See gradle.properties
+            // productKeyStore=../wasabeef.keystore
+            // productKeyAlias=wasabeef
+            // productKeyStorePassword=wasabeef
+            // productKeyAliasPassword=wasabeef
+//            storeFile file(productKeyStore)
+//            keyAlias productKeyAlias
+//            storePassword productKeyStorePassword
+//            keyPassword productKeyAliasPassword
+            storeFile file(PRODUCT_KEY_STORE)
+            keyAlias PRODUCT_KEY_ALIAS
+            storePassword PRODUCT_KEY_STORE_PWD
+            keyPassword PRODUCT_KEY_ALIAS_PWD
+        }
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            zipAlignEnabled true
+            applicationIdSuffix '.debug'
+            versionNameSuffix '-dev'
+        }
+        release {
+            debuggable false
+            zipAlignEnabled false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        develop { applicationId PACKAGE_NAME + '.develop' }
+        staging { applicationId PACKAGE_NAME + '.staging' }
+        product { applicationId PACKAGE_NAME }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:+'
+    compile 'org.xwalk:xwalk_core_library:12+'
+    compile('com.crashlytics.sdk.android:crashlytics:2.2.4@aar') { transitive = true; }
+}

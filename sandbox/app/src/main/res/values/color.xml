@@ -1,0 +1,72 @@
+<!-- ===================================================== カラーコード定義 -->
+<resources>
+
+  <!-- ========================================================= キーカラー -->
+  <color name="app_key_color">#7dbc2a</color>
+  <!-- =================================================== キーカラー(透過) -->
+  <color name="app_key_color_alpha_aa">#aa7dbc2a</color>
+
+  <!-- ============================================= アプリケーション背景色 -->
+  <color name="app_background">#eeeeee</color>
+
+  <!-- ======================================= Positiveボタン(Normal)背景色 -->
+  <color name="btn_positive_normal">#fdce35</color>
+  <!-- ====================================== Positiveボタン(Pressed)背景色 -->
+  <color name="btn_positive_pressed">#ffe79a</color>
+  <!-- ======================================= Negativeボタン(Normal)背景色 -->
+  <color name="btn_negative_normal">#cbcdd2</color>
+  <!-- ====================================== Negativeボタン(Pressed)背景色 -->
+  <color name="btn_negative_pressed">#e5e6e8</color>
+
+  <!-- =============================================== 動画一覧ヘッダ背景色 -->
+  <color name="video_list_header_background">#f7f7f7</color>
+
+  <!-- ============================================= コーナータイトル文字色 -->
+  <color name="text_segment_title_in_card">#252525</color>
+  <!-- ===================================================== 動画タグ文字色 -->
+  <color name="text_video_tag_in_card">#5a5a5a</color>
+  <!-- ========================================= アプリを閉じるボタン文字色 -->
+  <color name="text_btn_close_app">#7f6100</color>
+  <!-- ================================= メッセージ(エラーダイアログ)文字色 -->
+  <color name="text_msg_in_error_dialog">#444444</color>
+
+  <!-- ================================== 動画Seekbarインジケータ色(グレー) -->
+  <color name="seek_bar_video_gray">#d8d8d8</color>
+  <!-- ================================ 動画Seekbarインジケータ色(オレンジ) -->
+  <color name="seek_bar_video_orange">#ecb350</color>
+  <!-- ================================ 音量Seekbarインジケータ色(オレンジ) -->
+  <color name="seek_bar_volume_orange">#ffa200</color>
+
+  <!-- =========================================================== 黒(透過) -->
+  <color name="black_alpha_aa">#aa000000</color>
+  <!-- =========================================================== 白(透過) -->
+  <color name="white_alpha_aa">#aaffffff</color>
+  <!-- ======================================================= ライトグレー -->
+  <color name="lightgray">#d3d3d3</color>
+  <!-- ================================================= ライトグレー(透過) -->
+  <color name="lightgray_alpha_aa">#aad3d3d3</color>
+
+  <!-- =========================================== カスタムダイアログ背景色 -->
+  <color name="bg_dialog_customized">#eeeeee</color>
+
+  <!-- ====================================== TOP(保護者用)画面のダイアログ -->
+  <color name="dialog_orange">#ecb350</color>
+  <color name="dialog_gray">#c0c0c0</color>
+  <color name="dialog_light_gray">#d8d8d8</color>
+
+  <!-- ================================================== TOP(保護者用)画面 -->
+  <color name="parent_top_line">#d8d8d8</color>
+
+  <!-- =========================================== 問い合わせ(保護者用)画面 -->
+  <color name="inquiry_orange">#ffa200</color>
+
+  <!-- ============================================= Push通知(保護者用)画面 -->
+  <color name="push_orange">#ffa200</color>
+
+  <!-- =============================================================== 共通 -->
+  <!-- ==================================================================== -->
+  <color name="white">#ffffff</color>
+  <color name="black">#000000</color>
+  <color name="gray">#808080</color>
+
+</resources>
